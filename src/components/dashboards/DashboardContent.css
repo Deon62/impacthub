@@ -1,0 +1,501 @@
+.dashboard-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section A: KPI Summary */
+.kpi-section {
+  width: 100%;
+}
+
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.kpi-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.kpi-number {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.kpi-label {
+  font-size: 0.875rem;
+  color: #6B7280;
+  font-weight: 400;
+}
+
+/* Section B: Projects Overview */
+.projects-section {
+  width: 100%;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0;
+}
+
+.btn-create-project {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #1F3A5F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-create-project:hover {
+  background-color: #1a2f4d;
+}
+
+.btn-create-project:active {
+  background-color: #152438;
+}
+
+.table-container {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.projects-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.projects-table thead {
+  background-color: #F7F9FC;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.projects-table th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.projects-table tbody tr {
+  border-bottom: 1px solid #E5E7EB;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.projects-table tbody tr:hover {
+  background-color: #F7F9FC;
+}
+
+.projects-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.projects-table td {
+  padding: 1rem;
+  font-size: 0.9375rem;
+  color: #1A1A1A;
+}
+
+.project-name {
+  font-weight: 500;
+  color: #1F3A5F;
+}
+
+.sdg-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sdg-icon-small {
+  width: 24px;
+  height: 24px;
+  background-color: #F7F9FC;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  flex-shrink: 0;
+}
+
+.sdg-text {
+  font-size: 0.875rem;
+  color: #1A1A1A;
+}
+
+.progress-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 6px;
+  background-color: #E5E7EB;
+  border-radius: 3px;
+  overflow: hidden;
+  min-width: 60px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #6BBF59;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: #1A1A1A;
+  min-width: 40px;
+  text-align: right;
+}
+
+.funds-in-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.funds-amount {
+  font-size: 0.875rem;
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+.funds-progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #E5E7EB;
+  border-radius: 2px;
+  overflow: hidden;
+  max-width: 120px;
+}
+
+.funds-progress-fill {
+  height: 100%;
+  background-color: #4DA1A9;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.status-badge {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.btn-view {
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-view:hover {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.pagination-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-info {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+/* Section C: SDG Overview */
+.sdg-section {
+  width: 100%;
+}
+
+.sdg-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.sdg-tile {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: left;
+}
+
+.sdg-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.sdg-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #F7F9FC;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  flex-shrink: 0;
+}
+
+.sdg-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  line-height: 1.4;
+}
+
+.sdg-stats {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.sdg-stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.sdg-stat-icon {
+  color: #6B7280;
+  flex-shrink: 0;
+}
+
+.sdg-stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1F3A5F;
+}
+
+/* Section D: Reporting Actions */
+.reporting-section {
+  width: 100%;
+}
+
+.reporting-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.reporting-header {
+  margin-bottom: 1.5rem;
+}
+
+.reporting-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0;
+}
+
+.reporting-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.reporting-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.reporting-info-item {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.reporting-label {
+  font-size: 0.875rem;
+  color: #6B7280;
+  min-width: 140px;
+}
+
+.reporting-value {
+  font-size: 0.875rem;
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+.reporting-empty {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.reporting-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-reporting-primary {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #1F3A5F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-reporting-primary:hover {
+  background-color: #1a2f4d;
+}
+
+.btn-reporting-primary:active {
+  background-color: #152438;
+}
+
+.btn-reporting-secondary {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-reporting-secondary:hover {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+.btn-reporting-secondary:active {
+  background-color: #F0F2F5;
+}
+
+@media (max-width: 1200px) {
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .btn-create-project {
+    width: 100%;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .projects-table {
+    min-width: 800px;
+  }
+
+  .sdg-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reporting-actions {
+    flex-direction: column;
+  }
+
+  .btn-reporting-primary,
+  .btn-reporting-secondary {
+    width: 100%;
+  }
+
+  .reporting-info-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .reporting-label {
+    min-width: auto;
+  }
+}

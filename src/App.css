@@ -1,0 +1,160 @@
+.entry-page {
+  min-height: 100vh;
+  max-height: 100vh;
+  background-image: url('/assets/home.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #F7F9FC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.entry-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 58, 95, 0.15);
+  z-index: 1;
+}
+
+.entry-content {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  padding: 0;
+}
+
+.product-name {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #1F3A5F;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.value-proposition {
+  font-size: 1.375rem;
+  color: #1A1A1A;
+  line-height: 1.7;
+  margin: 0 0 3rem 0;
+  font-weight: 400;
+  max-width: 100%;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.secondary-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 0.875rem 2.25rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.2s ease;
+  min-width: 160px;
+}
+
+.btn-primary {
+  background-color: #1F3A5F;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #1a2f4d;
+}
+
+.btn-primary:active {
+  background-color: #152438;
+}
+
+.btn-secondary {
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  background-color: #F7F9FC;
+  border-color: #4DA1A9;
+  color: #4DA1A9;
+}
+
+.btn-secondary:active {
+  background-color: #F0F2F5;
+}
+
+.btn-tertiary {
+  padding: 0.625rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: color 0.2s ease;
+  background: none;
+  color: #1A1A1A;
+  text-decoration: none;
+}
+
+.btn-tertiary:hover {
+  color: #4DA1A9;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.btn-tertiary:active {
+  color: #3d8a91;
+}
+
+@media (max-width: 640px) {
+  .product-name {
+    font-size: 2.5rem;
+  }
+
+  .value-proposition {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .secondary-action {
+    margin-top: 0.75rem;
+  }
+}

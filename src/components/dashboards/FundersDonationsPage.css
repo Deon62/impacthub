@@ -1,0 +1,103 @@
+.funders-donations-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.table-container {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.donations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.donations-table thead {
+  background-color: #F7F9FC;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.donations-table th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.donations-table tbody tr {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.donations-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.donations-table tbody tr:hover {
+  background-color: #F7F9FC;
+}
+
+.donations-table td {
+  padding: 1rem;
+  font-size: 0.9375rem;
+  color: #1A1A1A;
+}
+
+.amount-cell {
+  font-weight: 500;
+  color: #1F3A5F;
+}
+
+.status-badge {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.status-received {
+  background-color: #F0FDF4;
+  color: #6BBF59;
+}
+
+.status-pledged {
+  background-color: #FFFBEB;
+  color: #F59E0B;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .donations-table {
+    min-width: 600px;
+  }
+}

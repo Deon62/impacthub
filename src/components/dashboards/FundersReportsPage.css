@@ -1,0 +1,103 @@
+.funders-reports-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+}
+
+.page-subtitle {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.table-container {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reports-table thead {
+  background-color: #F7F9FC;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.reports-table th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.reports-table tbody tr {
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.reports-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.reports-table tbody tr:hover {
+  background-color: #F7F9FC;
+}
+
+.reports-table td {
+  padding: 1rem;
+  font-size: 0.9375rem;
+  color: #1A1A1A;
+}
+
+.project-name {
+  font-weight: 500;
+  color: #1F3A5F;
+}
+
+.btn-download {
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-download:hover {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+  }
+
+  .reports-table {
+    min-width: 700px;
+  }
+}

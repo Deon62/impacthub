@@ -1,0 +1,762 @@
+.project-detail-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Section 1: Sticky Header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.sdg-tags-header {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.sdg-tag-header {
+  padding: 0.25rem 0.75rem;
+  background-color: #F7F9FC;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  color: #1F3A5F;
+  font-weight: 500;
+}
+
+.status-badge-header {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background-color: #F0FDF4;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.btn-primary-header,
+.btn-secondary-header {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary-header {
+  background-color: #1F3A5F;
+  color: #FFFFFF;
+  border: none;
+}
+
+.btn-primary-header:hover {
+  background-color: #1a2f4d;
+}
+
+.btn-secondary-header {
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+}
+
+.btn-secondary-header:hover {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+.project-content {
+  padding: 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Section 2: Project Overview */
+.project-section {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0 0 1.5rem 0;
+}
+
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6B7280;
+}
+
+.info-value {
+  font-size: 0.9375rem;
+  color: #1A1A1A;
+  font-weight: 500;
+}
+
+.info-value-text {
+  font-size: 0.9375rem;
+  color: #1A1A1A;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.metric-card {
+  background-color: #F7F9FC;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  padding: 1.25rem;
+}
+
+.metric-label {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1F3A5F;
+}
+
+/* Section 3: Financials */
+.funding-bar-container {
+  margin-bottom: 1.5rem;
+}
+
+.funding-bar {
+  height: 12px;
+  background-color: #E5E7EB;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+}
+
+.funding-bar-fill {
+  height: 100%;
+  background-color: #6BBF59;
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.funding-stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.donations-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.donations-table thead {
+  background-color: #F7F9FC;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.donations-table th {
+  padding: 0.875rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1A1A1A;
+}
+
+.donations-table td {
+  padding: 1rem;
+  font-size: 0.9375rem;
+  color: #1A1A1A;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.donations-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.donations-table tfoot {
+  background-color: #F7F9FC;
+  font-weight: 600;
+}
+
+.total-label {
+  text-align: right;
+  color: #1F3A5F;
+}
+
+.total-amount {
+  color: #1F3A5F;
+  font-size: 1rem;
+}
+
+.amount-cell {
+  font-weight: 500;
+  color: #1F3A5F;
+}
+
+.status-badge {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.status-received {
+  background-color: #F0FDF4;
+  color: #6BBF59;
+}
+
+.status-pending {
+  background-color: #FFFBEB;
+  color: #F59E0B;
+}
+
+/* Section 4: Milestones */
+.milestones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.milestone-card {
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+}
+
+.milestone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.milestone-info {
+  flex: 1;
+}
+
+.milestone-outcome {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0 0 0.5rem 0;
+}
+
+.milestone-description {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0;
+}
+
+.milestone-status-badge {
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  background-color: #F7F9FC;
+}
+
+.milestone-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.progress-bar-container {
+  flex: 1;
+  height: 8px;
+  background-color: #E5E7EB;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #6BBF59;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.875rem;
+  color: #1A1A1A;
+  font-weight: 500;
+  min-width: 50px;
+}
+
+.milestone-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.evidence-count {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.milestone-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.btn-view-milestone,
+.btn-update-milestone,
+.btn-upload-evidence {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-view-milestone:hover,
+.btn-update-milestone:hover,
+.btn-upload-evidence:hover {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+/* Section 5: SDG Alignment */
+.sdg-alignment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.sdg-alignment-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.sdg-alignment-icon {
+  width: 48px;
+  height: 48px;
+  background-color: #F7F9FC;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  flex-shrink: 0;
+}
+
+.sdg-alignment-info {
+  flex: 1;
+}
+
+.sdg-alignment-name {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0 0 0.5rem 0;
+}
+
+.sdg-alignment-description {
+  font-size: 0.875rem;
+  color: #6B7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Section 6: Impact Summary */
+.impact-summary-card {
+  background-color: #F7F9FC;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.impact-summary-text {
+  font-size: 0.9375rem;
+  color: #1A1A1A;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  white-space: pre-wrap;
+}
+
+.impact-summary-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-summary {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-summary:hover {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+/* Section 7: Activity Log */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.activity-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  background-color: #FFFFFF;
+}
+
+.activity-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.activity-content {
+  flex: 1;
+}
+
+.activity-action {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: #1A1A1A;
+  margin-bottom: 0.25rem;
+}
+
+.activity-details {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.activity-date {
+  font-size: 0.875rem;
+  color: #6B7280;
+  flex-shrink: 0;
+}
+
+/* Empty States */
+.empty-state {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.empty-message {
+  font-size: 1rem;
+  color: #6B7280;
+  margin: 0 0 1.5rem 0;
+}
+
+.btn-primary {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #1F3A5F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1a2f4d;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.milestone-modal {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.modal-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6B7280;
+  cursor: pointer;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: #F7F9FC;
+  color: #1A1A1A;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.milestone-detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.milestone-detail-section:last-child {
+  margin-bottom: 0;
+}
+
+.detail-section-title {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #1F3A5F;
+  margin: 0 0 0.75rem 0;
+}
+
+.updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.update-item {
+  padding: 0.75rem;
+  background-color: #F7F9FC;
+  border-radius: 6px;
+}
+
+.update-date {
+  font-size: 0.75rem;
+  color: #6B7280;
+  margin-bottom: 0.25rem;
+}
+
+.update-note {
+  font-size: 0.875rem;
+  color: #1A1A1A;
+}
+
+.evidence-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.evidence-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background-color: #F7F9FC;
+  border-radius: 6px;
+}
+
+.evidence-icon {
+  font-size: 1.25rem;
+}
+
+.evidence-name {
+  flex: 1;
+  font-size: 0.875rem;
+  color: #1A1A1A;
+}
+
+.evidence-date {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  border-top: 1px solid #E5E7EB;
+}
+
+.btn-secondary {
+  padding: 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #FFFFFF;
+  color: #1F3A5F;
+  border: 1px solid #E5E7EB;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #F7F9FC;
+  border-color: #1F3A5F;
+}
+
+@media (max-width: 768px) {
+  .sticky-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn-primary-header,
+  .btn-secondary-header {
+    width: 100%;
+  }
+
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sdg-alignment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .milestone-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .milestone-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn-view-milestone,
+  .btn-update-milestone,
+  .btn-upload-evidence {
+    width: 100%;
+  }
+}
