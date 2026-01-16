@@ -4,30 +4,101 @@
   gap: 2rem;
 }
 
+/* Header */
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1.5rem;
 }
 
 .page-title {
   font-size: 1.875rem;
   font-weight: 600;
-  color: #1F3A5F;
-  margin: 0 0 0.5rem 0;
-  letter-spacing: -0.02em;
+  color: #1f3a5f;
+  margin-bottom: 0.25rem;
 }
 
 .page-subtitle {
   font-size: 0.9375rem;
-  color: #6B7280;
-  margin: 0;
+  color: #6b7280;
 }
 
+.primary-button {
+  background-color: #1f3a5f;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  background-color: #162c47;
+}
+
+/* Summary Cards */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.summary-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.card-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.card-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f3a5f;
+}
+
+/* Charts */
+.charts-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.chart-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.chart-card h3 {
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
+  color: #1f3a5f;
+}
+
+.chart-placeholder {
+  height: 180px;
+  background: #f7f9fc;
+  border: 1px dashed #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+/* Table */
 .table-container {
-  background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
+  background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -37,67 +108,38 @@
   border-collapse: collapse;
 }
 
-.donations-table thead {
-  background-color: #F7F9FC;
-  border-bottom: 1px solid #E5E7EB;
-}
-
-.donations-table th {
+.donations-table th,
+.donations-table td {
   padding: 0.875rem 1rem;
-  text-align: left;
   font-size: 0.875rem;
-  font-weight: 500;
-  color: #1A1A1A;
-  border-bottom: 1px solid #E5E7EB;
 }
 
-.donations-table tbody tr {
-  border-bottom: 1px solid #E5E7EB;
-}
-
-.donations-table tbody tr:last-child {
-  border-bottom: none;
+.donations-table thead {
+  background: #f7f9fc;
 }
 
 .donations-table tbody tr:hover {
-  background-color: #F7F9FC;
-}
-
-.donations-table td {
-  padding: 1rem;
-  font-size: 0.9375rem;
-  color: #1A1A1A;
+  background: #f7f9fc;
 }
 
 .amount-cell {
   font-weight: 500;
-  color: #1F3A5F;
+  color: #1f3a5f;
 }
 
 .status-badge {
-  font-size: 0.875rem;
-  font-weight: 500;
   padding: 0.25rem 0.75rem;
   border-radius: 12px;
-  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 .status-received {
-  background-color: #F0FDF4;
-  color: #6BBF59;
+  background: #f0fdf4;
+  color: #16a34a;
 }
 
 .status-pledged {
-  background-color: #FFFBEB;
-  color: #F59E0B;
-}
-
-@media (max-width: 768px) {
-  .table-container {
-    overflow-x: auto;
-  }
-
-  .donations-table {
-    min-width: 600px;
-  }
+  background: #fffbeb;
+  color: #f59e0b;
 }
