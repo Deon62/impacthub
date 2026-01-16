@@ -10,6 +10,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .page-title {
@@ -27,7 +28,7 @@
 }
 
 .btn-primary {
-  padding: 0.625rem 1.25rem;
+  padding: 0.625rem 1rem;
   font-size: 0.9375rem;
   font-weight: 500;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -38,6 +39,8 @@
   cursor: pointer;
   transition: background-color 0.2s ease;
   white-space: nowrap;
+  max-width: 160px;
+  flex-shrink: 0;
 }
 
 .btn-primary:hover {
