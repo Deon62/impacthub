@@ -1,53 +1,308 @@
-.funders-sdg-overview-page {
+.funders-sdg-impact-page {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
+/* Header */
 .page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .page-title {
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: 600;
-  color: #1F3A5F;
+  color: #1f3a5f;
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.02em;
 }
 
 .page-subtitle {
-  font-size: 0.9375rem;
-  color: #6B7280;
+  font-size: 1rem;
+  color: #6b7280;
   margin: 0;
 }
 
-.sdg-grid {
+/* Summary Cards */
+.impact-summary-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
-.sdg-tile {
-  background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
+.impact-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
-  padding: 1rem;
-  text-align: left;
+  padding: 1.5rem;
 }
 
-.sdg-header {
+.impact-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 0.75rem 0;
+  font-weight: 500;
+}
+
+.impact-value {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f3a5f;
+  margin: 0;
+}
+
+/* Chart Section */
+.chart-section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.chart-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f3a5f;
+  margin: 0;
+}
+
+/* Metric Toggle */
+.metric-toggle {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #f3f4f6;
+  padding: 0.375rem;
+  border-radius: 6px;
+}
+
+.toggle-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-btn:hover {
+  color: #374151;
+}
+
+.toggle-btn.active {
+  background-color: #fff;
+  color: #1f3a5f;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Bar Chart */
+.sdg-bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bar-item {
+  display: grid;
+  grid-template-columns: 200px 1fr 50px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.bar-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bar-sdg-number {
+  font-weight: 600;
+  color: #1f3a5f;
+  font-size: 0.875rem;
+}
+
+.bar-sdg-name {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.bar-container {
+  background-color: #f3f4f6;
+  border-radius: 4px;
+  height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1rem;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  transition: width 0.3s ease;
+  border-radius: 4px;
 }
 
-.sdg-icon {
-  width: 36px;
+.bar-value {
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.bar-percentage {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f3a5f;
+  text-align: right;
+  min-width: 50px;
+}
+
+/* Table Section */
+.table-section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.table-section h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f3a5f;
+  margin: 0 0 1.5rem 0;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.sdg-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sdg-table thead {
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.sdg-table th {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sdg-table th.text-right {
+  text-align: right;
+}
+
+.sdg-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+  color: #1f2937;
+}
+
+.sdg-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+.sdg-number {
+  text-align: center;
+}
+
+.sdg-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #1f3a5f;
+  font-size: 0.875rem;
+}
+
+.sdg-name-cell {
+  font-weight: 500;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.beneficiaries-cell {
+  font-weight: 600;
+  color: #059669;
+}
+
+/* Context Note */
+.context-note {
+  background-color: #f3f4f6;
+  border-left: 4px solid #6b7280;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.context-note p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chart-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .bar-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .bar-label {
+    flex-direction: row;
+    gap: 0.75rem;
+  }
+
+  .bar-percentage {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sdg-table th,
+  .sdg-table td {
+    padding: 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .impact-summary-cards {
+    grid-template-columns: 1fr;
+  }
+}
   height: 36px;
   background-color: #F7F9FC;
   border-radius: 6px;
