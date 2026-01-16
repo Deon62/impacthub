@@ -33,7 +33,6 @@ function Login({ onBack, onLogin }) {
     <div className="login-page">
       <div className="login-container">
         <div className="login-header">
-          <h1 className="login-title">ImpactHub</h1>
           <p className="login-subtitle">Sign in to your account</p>
         </div>
 
