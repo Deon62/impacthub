@@ -1,6 +1,12 @@
 import './FundersSDGOverviewPage.css'
 
 function FundersSDGOverviewPage() {
+  // Helper function to extract SDG descriptive name from full name
+  const getSDGName = (fullName) => {
+    const match = fullName.match(/SDG \d+: (.+)/)
+    return match ? match[1] : fullName
+  }
+
   // Mock data - replace with actual data later
   const sdgData = [
     { id: 2, name: 'SDG 2: Zero Hunger', short: 'SDG 2', icon: '2', projects: 1, beneficiaries: 850 },
@@ -23,7 +29,7 @@ function FundersSDGOverviewPage() {
           <div key={sdg.id} className="sdg-tile">
             <div className="sdg-header">
               <div className="sdg-icon">{sdg.icon}</div>
-              <div className="sdg-name">{sdg.short}</div>
+              <div className="sdg-name">{getSDGName(sdg.name)}</div>
             </div>
             <div className="sdg-stats">
               <div className="sdg-stat">

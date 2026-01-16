@@ -20,6 +20,12 @@ function DashboardContent({ onViewProject, onNavigateToReports }) {
     { id: 4, name: 'Sustainable Agriculture', sdg: 'SDG 2', sdgNumber: 2, location: 'Ghana', budget: 400000, fundsIn: 400000, progress: 100, status: 'completed' },
   ]
 
+  // Helper function to extract SDG descriptive name from full name
+  const getSDGName = (fullName) => {
+    const match = fullName.match(/SDG \d+: (.+)/)
+    return match ? match[1] : fullName
+  }
+
   const sdgData = [
     { id: 2, name: 'SDG 2: Zero Hunger', short: 'SDG 2', icon: '2', projects: 1, beneficiaries: 850 },
     { id: 3, name: 'SDG 3: Good Health', short: 'SDG 3', icon: '3', projects: 1, beneficiaries: 1500 },
@@ -216,7 +222,7 @@ function DashboardContent({ onViewProject, onNavigateToReports }) {
             <div key={sdg.id} className="sdg-tile">
               <div className="sdg-header">
                 <div className="sdg-icon">{sdg.icon}</div>
-                <div className="sdg-name">{sdg.short}</div>
+                <div className="sdg-name">{getSDGName(sdg.name)}</div>
               </div>
               <div className="sdg-stats">
                 <div className="sdg-stat">

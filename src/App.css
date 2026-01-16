@@ -35,18 +35,18 @@
 }
 
 .product-name {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #1F3A5F;
-  margin: 0 0 1.5rem 0;
+  margin: 0 0 1rem 0;
   letter-spacing: -0.02em;
 }
 
 .value-proposition {
-  font-size: 1.375rem;
+  font-size: 1.25rem;
   color: #1A1A1A;
-  line-height: 1.7;
-  margin: 0 0 3rem 0;
+  line-height: 1.6;
+  margin: 0 0 2rem 0;
   font-weight: 400;
   max-width: 100%;
   word-wrap: break-word;
@@ -54,11 +54,12 @@
 }
 
 .action-buttons {
-  display: flex;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
   justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
+  max-width: 420px;
+  margin: 0 auto 1rem;
 }
 
 .secondary-action {
@@ -69,15 +70,16 @@
 
 .btn-primary,
 .btn-secondary {
-  padding: 0.875rem 2.25rem;
-  font-size: 1.0625rem;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   border: none;
-  border-radius: 6px;
+  border-radius: 12px;
   cursor: pointer;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  transition: background-color 0.2s ease;
-  min-width: 160px;
+  transition: all 0.2s ease;
+  width: 100%;
+  text-align: center;
 }
 
 .btn-primary {
@@ -146,12 +148,8 @@
   }
 
   .action-buttons {
-    flex-direction: column;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
+    grid-template-columns: 1fr;
+    max-width: 100%;
   }
 
   .secondary-action {

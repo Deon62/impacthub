@@ -106,7 +106,13 @@ function FundersDashboard({ onLogout }) {
 
       <main className="dashboard-main">
         <div className="dashboard-content">
-          {activeNav === 'dashboard' && <FundersDashboardContent />}
+          {activeNav === 'dashboard' && (
+            <FundersDashboardContent 
+              onViewAllProjects={() => setActiveNav('funded-projects')}
+              onViewAllDonations={() => setActiveNav('donations')}
+              onViewAllReports={() => setActiveNav('reports')}
+            />
+          )}
           {activeNav === 'funded-projects' && <FundedProjectsPage />}
           {activeNav === 'donations' && <FundersDonationsPage />}
           {activeNav === 'reports' && <FundersReportsPage />}
