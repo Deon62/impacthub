@@ -1,6 +1,6 @@
 import './FundersDonationsPage.css'
 
-function FundersDonationsPage() {
+function FundersDonationsPage({ onNewDonation }) {
   const donations = [
     {
       id: 1,
@@ -66,7 +66,7 @@ function FundersDonationsPage() {
           </p>
         </div>
 
-        <button className="primary-button">
+        <button className="primary-button" onClick={onNewDonation}>
           New Donation / Pledge
         </button>
       </div>

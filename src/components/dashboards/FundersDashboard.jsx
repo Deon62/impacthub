@@ -12,6 +12,7 @@ import {
 import FundersDashboardContent from './FundersDashboardContent'
 import FundedProjectsPage from './FundedProjectsPage'
 import FundersDonationsPage from './FundersDonationsPage'
+import NewDonationPage from './NewDonationPage'
 import FundersReportsPage from './FundersReportsPage'
 import FundersSDGOverviewPage from './FundersSDGOverviewPage'
 import FundersOrganizationPage from './FundersOrganizationPage'
@@ -114,7 +115,8 @@ function FundersDashboard({ onLogout }) {
             />
           )}
           {activeNav === 'funded-projects' && <FundedProjectsPage />}
-          {activeNav === 'donations' && <FundersDonationsPage />}
+          {activeNav === 'donations' && <FundersDonationsPage onNewDonation={() => setActiveNav('new-donation')} />}
+          {activeNav === 'new-donation' && <NewDonationPage onBack={() => setActiveNav('donations')} />}
           {activeNav === 'reports' && <FundersReportsPage />}
           {activeNav === 'sdg-overview' && <FundersSDGOverviewPage />}
           {activeNav === 'organization' && <FundersOrganizationPage />}
